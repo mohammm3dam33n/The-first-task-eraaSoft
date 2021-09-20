@@ -1,0 +1,128 @@
+/* Start Variables */
+
+:root {
+    --main-background: slategrey;
+    --secondary-background: lightgrey;
+    --main-color: white;
+    --secondary-color: red;
+    --box-shadow: 0px 0px 10px 0 white;
+    --padding: 20px;
+}
+
+
+/* End Variables */
+
+* {
+    box-sizing: border-box;
+}
+
+
+/* Add a gray background color with some padding */
+
+body {
+    font-family: Arial;
+    padding: var(--padding);
+    background: var(--main-color);
+}
+
+
+/* Header/Blog Title */
+
+.header {
+    padding: 30px;
+    font-size: 20px;
+    text-align: center;
+    background-color: var(--main-background);
+    color: var(--main-color);
+}
+
+
+/* Create two equal columns that floats next to each other */
+
+.rightcolumn {
+    float: left;
+    width: 75%;
+    padding-left: 20px;
+}
+
+.leftcolumn {
+    float: left;
+    width: 25%;
+}
+
+.card ul {
+    margin-bottom: 150px;
+}
+
+.List {
+    background-color: var(--secondary-background);
+}
+
+ul {
+    margin-top: -8px;
+    padding-left: 0;
+}
+
+.List ul li {
+    list-style-type: none;
+    margin-bottom: 10px;
+}
+
+.List ul li:hover a {
+    color: var(--secondary-color);
+}
+
+
+/* Add a card effect for articles */
+
+.card {
+    padding: var(--padding);
+}
+
+
+/* Clear floats after the columns
+by [clear:both] element
+The clear property controls the flow next to floated elements.
+The clear property specifies what should happen with the element that is next to a floating element.
+Tip: Also look at the float property.
+*/
+
+.row:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+/* Footer */
+
+.footer {
+    padding: 20px;
+    text-align: center;
+    background-color: var(--main-background);
+    color: var(--main-color);
+}
+
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+
+@media screen and (max-width: 800px) {
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+}
+
+@media(max-width: 800px) {
+    .List ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+        /*            */
+        margin: 10px;
+    }
+}
+
+
+}
