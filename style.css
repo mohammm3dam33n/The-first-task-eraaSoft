@@ -1,43 +1,79 @@
-<html lang="en">
+/* Start Variables */
+:root {
+    --main-background: grey;
+    --secondary-background: lightgrey;
+    --main-color: white;
+    --secondary-color: red;
+    --padding: 20px;
+}
+/* End Variables */
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <link rel="stylesheet" href="style.css">
-</head>
+* {
+    box-sizing: border-box;
+}
 
-<body>
-    <div class="header">
-        <h2>Cities</h2>
-    </div>
+body {
+    padding: var(--padding);
+    font-family: Arial, Helvetica, sans-serif
+}
 
-    <div class="parent">
-        
-        <div class="leftcolumn">
-            <ul>
-                <li><a href="#london">london</a></li>
-                <li><a href="#Paris">Paris</a></li>
-                <li><a href="#Tokyo">Tokyo</a></li>
-            </ul>
-        </div>
+.header {
+    background-color: var(--main-background);
+    text-align: center;
+    color: var(--main-color);
+    padding: var(--padding);
+}
 
-        <div class="rightcolumn">
-            <h2>London</h2>
-            <p>
-                London is the capital city of England. It is the most populous city in the United Kingdom , with a metropolitan area of over 13 million inhabitants.
-            </p>
-            <p>
-                standing on the River Thames , London has been a major settlement for two millennia , its history going back to its founding by the Romans , who named it Londinium
-            </p>
-        </div>
+.leftcolumn {
+    float: left;
+    width: 25%;
+    padding-bottom: 150px;
+    background-color: var( --secondary-background);
+}
 
-    </div>
+.rightcolumn {
+    float: right;
+    width: 75%;
+    padding-left: var(--padding);
+    padding-right: var(--padding);
+}
 
-    <div class="footer">
-        <p>footer</p>
-    </div>
-</body>
+ul {
+    padding-left: 10px;
+}
 
-</html>
+ul li {
+    list-style-type: none;
+    margin-bottom: 5px;
+}
+
+ul li:hover a {
+    color: var( --secondary-color);
+}
+
+.parent::after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+.footer {
+    background-color: var(--main-background);
+    text-align: center;
+    color: var(--main-color);
+    padding: 10px;
+}
+
+/* Responsive layout - when the screen is less than 800px wide, make the two columns stack on top of each other instead of next to each other */
+@media (max-width: 800px) {
+    .leftcolumn,
+    .rightcolumn {
+        width: 100%;
+        padding: 0;
+    }
+    ul {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+}
