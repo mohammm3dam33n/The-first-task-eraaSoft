@@ -47,7 +47,7 @@ ul li {
     margin-bottom: 5px;
 }
 
-ul li:hover a {
+ul li a:hover {
     color: var( --secondary-color);
 }
 
