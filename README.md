@@ -1,3 +1,3 @@
 # The-first-task-eraaSoft
 
---Simple design that works with all devices, even the microwave--
+- Simple design that fits all device, even the microwave -
